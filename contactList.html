@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang= "en-US">
+<head>
+<meta charset= "UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src= "contactList.js"></script>
+<link rel= "stylesheet" href= "contactList.css">
+</head>
+
+<body>
+<div id= "main">
+<h1> CONTACT LIST ANGULARJS APPLICAION </h1>
+<div ng-app= "contactList" ng-controller= "myCtrl">
+<div id= "leftRightContainer">
+<div id= "upper">
+<button ng-click= "form()"> {{sign}} </button> 
+<input type= "text" id= "search" name= "search" ng-model= "search" size= "30" placeholder= "SEARCH...">
+</div>
+<div id= "leftU">
+<ul>
+<li ng-repeat= "x in names | filter: search | orderBy:'name'"><a href= "" ng-click= "details(x.name, x.phone)" ng-dblclick= "delete(x)">{{x.name}}</a></li>
+</ul>
+</div>
+<div id= "rightU">
+<h2> NAME: </h2>
+<h2> {{name}} </h2><br>
+<h2> CONTACT NO.: </h2>
+<h2> {{phone}} </h2><br><br>
+</div>
+</div>
+
+<div id= "bottom" ng-show= "show">
+<h2> ADD NEW CONTACT FORM </h2>
+<div id= "form">
+<form name= "myForm" novalidate> 
+<div id= "fname" class= "layer">
+<div class= "left"><label> FIRSTNAME </label></div>
+<div class= "right"><input type= "text" name= "name" size= "30" ng-model= "addNew.name" placeholder= "Enter Name"required></div><br>
+<span ng-show= "myForm.name.$dirty && myForm.name.$invalid">
+<span ng-show= "myForm.name.$error.required"> Field is Required </span></span>
+</div>
+<div id= "pno" class= "layer">
+<div class= "left"><label> PHONE NUMBER </label></div>
+<div class= "right"><input type= "number" name= "phone" size= "30" ng-model= "addNew.phone" minlength= "10" maxlength= "10"  placeholder= "Enter Contact Number" required></div><br>
+<span ng-show= "myForm.phone.$dirty && myForm.phone.$invalid">
+<span ng-show= "myForm.phone.$error.required"> Field is Required </span>
+<span ng-show= "myForm.phone.$error.minlength || myForm.phone.$error.maxlength || myForm.phone.$error.number"> Invalid Phone number </span></span>
+</div>
+<button ng-disabled= "myForm.name.$invalid || myForm.phone.$invalid" ng-click= "submit()"> ADD </button>
+<span>{{msg}}</span>
+</form>
+</div>
+</div>
+</div></div>
+</body>
+</html>

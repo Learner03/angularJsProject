@@ -1,0 +1,134 @@
+#main{
+	margin: 1% 25%;
+}
+#leftRightContainer{
+	background-color: #E6DBFF;
+	border-radius: 10px;
+}
+#upper{
+	margin: 1% 1%;
+	height: 10%;
+	width: 100%;
+}
+#leftU, #rightU{
+	display: inline-block;
+	margin: 1% 1%;
+}
+#leftU{
+	width: 50%;
+}
+#rightU{
+	width: 40%;
+	background-color: white;
+	border-radius: 10px;
+}
+#bottom{
+	background-color: #E6DBFF;
+}
+#bottom h2{
+	padding: 20px 0px;
+}
+h1{ 
+    padding: 20px 0px;
+	text-align:center;
+	letter-spacing: 3px;
+	font-family:"AR BONNIE", "Lucida Console";
+	animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+	-webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+}
+h2{
+	text-align:center;
+	letter-spacing: 3px;
+	font-family:"AR BONNIE", "Lucida Console";
+}
+@keyframes example {
+    0%   {background-color:red;}
+    25%  {background-color:yellow;}
+    50%  {background-color:blue;}
+    75%  {background-color:green;}
+    100% {background-color:red;}
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:red;}
+    25%  {background-color:yellow;}
+    50%  {background-color:blue;}
+    75%  {background-color:green;}
+    100% {background-color:red;}
+}
+ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+a{  
+	border-radius: 5px;
+	text-decoration:none;
+	display: block;
+	color:white;
+	text-align:center;
+	height:35px;
+	background-color: #FF62B0;
+	margin-bottom:5px;
+	padding-top:10px;
+	font-family:"AR BONNIE", "Lucida Console";
+	font-size:18px;
+	letter-spacing: 4px;
+	font-weight: 700;
+	transition: background-color 0.5s;
+}
+a:hover{
+	background-color: white;
+	border-bottom: 1px solid #FF62B0;
+	color: #FF62B0;
+}
+button{
+	border-radius: 5px;
+	height: 50px;
+	width: 100px;
+	background-color: grey;
+	border:none;
+	margin: 3% 0;
+	
+}
+button:hover{
+	background-color: #616161;
+	color:white;
+}
+.left{
+	text-align: right;
+	width: 40%;
+}
+.right{
+	width: 50%;
+}
+#form{
+	margin: 0 1%;
+}
+.left, .right{
+	display:inline-block;
+}
+.layer{
+	margin-bottom: 2%;
+}
+label, input{
+	font-family:"AR BONNIE", "Lucida Console";
+	font-size:18px;
+	letter-spacing: 4px;
+}
+span{
+	color: red;
+	margin-left:20%;
+}
+input{
+	border-radius: 5px;
+	border:none;
+	height: 40px;
+	width: 77%;
+	padding-left: 25px;
+}
